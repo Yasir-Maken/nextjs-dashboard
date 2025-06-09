@@ -24,7 +24,7 @@ const FormSchema = z.object({
     invalid_type_error: 'Please select an invoice status.',
   }),
 
-  date: z.string(),
+  date: z.string(), 
 });
 
 export type State = {
@@ -82,7 +82,7 @@ export async function createInvoice(prevState: State, formData: FormData) {
 
 // ------------------------------------------------------------------------------------------------
 // Use Zod to update the expected types
-const UpdateInvoice = FormSchema.omit({ id: true, date: true });
+// const UpdateInvoice = FormSchema.omit({ id: true, date: true });
  
 // ...
  
